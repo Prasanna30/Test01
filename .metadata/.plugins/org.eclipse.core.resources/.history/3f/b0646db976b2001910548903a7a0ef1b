@@ -1,0 +1,40 @@
+package somepackage;
+
+import java.util.Scanner;
+
+public class FibonocciEx {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int maxnumber =0;
+		int previousnumber =0;
+		int nextnumber =1;
+
+		Scanner io = new Scanner(System.in);
+		
+		// System.out.println("How many numbers you want in Fibonacci:");
+		   System.out.println("Enter the Fibobacci number:");
+	        Scanner scanner = new Scanner(System.in);
+	        maxnumber = scanner.nextInt();
+	        System.out.print("Fibonacci Series of "+maxnumber+" numbers:");
+
+	        for (int i = 1; i <= maxnumber; ++i)
+	        {
+	            //System.out.print(previousnumber+" ");
+	            /* On each iteration, we are assigning second number
+	             * to the first number and assigning the sum of last two
+	             * numbers to the second number
+	             */
+
+	      
+	            int sum = previousnumber + nextnumber;
+	            previousnumber = nextnumber;
+	            nextnumber = sum;
+	        }
+	        System.out.println(previousnumber);
+		
+		
+	}
+
+}
